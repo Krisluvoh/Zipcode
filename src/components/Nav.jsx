@@ -34,11 +34,11 @@ export default function Nav({ setSearchResults, setZips, setPop }) {
     }
 
     return (
-        <nav>
+        <nav className="container">
 
             <div>
                 <h2>List Zip Codes by City and State</h2>
-                <div>
+                <div className="nav-form">
                     {states ? (
                         <>
                             <input type="text" placeholder="Enter a city" 
@@ -58,7 +58,7 @@ export default function Nav({ setSearchResults, setZips, setPop }) {
 
             <div>
                 <h2>Search by Zip Code</h2>
-                <div>
+                <div className="nav-form">
                     <input type="text" placeholder="Enter a ZIP code"
                     onChange={e=>{setZipQuery(e.target.value)}}/>
                     <button onClick={handleZipSearch}>Search</button>
