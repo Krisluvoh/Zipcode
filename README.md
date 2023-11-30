@@ -1,5 +1,19 @@
-**ZipUSA - US Zip Code Search Database**
+**ZipUSA - US Zip Code Search Database**             https://zipusa.netlify.app/ 
 Welcome to ZipUSA, a web application that allows users to search for and retrieve information about US zip codes. This README provides detailed instructions on setting up and running the project, as well as explanations for each component and commit in the codebase.
+
+![Image Alt Text](https://drive.google.com/file/d/1zNOQk93slyUyK9OYu2wYvEFUVmoehBAS/view?usp=sharing)
+
+
+
+
+
+
+
+
+
+
+
+
 
 Table of Contents
 
