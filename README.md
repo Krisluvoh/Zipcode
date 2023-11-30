@@ -119,6 +119,8 @@ The HTML file serves as the entry point for the React application.
 </html>
 
 
+
+
 **Getting Started**
 To run the project locally, follow these steps:
 
@@ -127,6 +129,9 @@ To run the project locally, follow these steps:
 3.  Install dependencies (npm install)
 4.  Start the development server (npm run dev)
 5.  Open your browser and go to http://localhost:#### to view the application.
+
+
+
 
 
 **Components Overview**
