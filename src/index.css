@@ -33,6 +33,8 @@ body {
 #root {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -51,7 +53,7 @@ header {
 nav {
   display: flex;
   gap: 3rem;
-  padding: 2rem;
+  padding: .5rem 2rem;
 }
 
 nav > div > h2 {
@@ -109,10 +111,33 @@ footer {
    text-align: center;
 }
 
+#video-backdrop {
+  position: fixed;
+  /* top: -200px; */
+  left: 0;
+  /* width: 100vh; */
+  /* height: 100vh; */
+}
+
+#video {
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+#video iframe {
+  /* width: 100%; */
+  /* height: 100%; */
+  z-index: -1;
+}
+
 @media screen and (max-width: 875px) {
   nav {
     flex-direction: column;
     align-items: center;
+    gap: .5rem;
+  }
+  nav h2 {
+    font-size: 1rem;
   }
   #zips {
     grid-template-columns: repeat(3, 1fr);
@@ -131,3 +156,33 @@ footer {
     align-items: center;
   }
 }
+
+/* ... Your existing CSS rules ... */
+
+/* body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.water-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("http://upload.wikimedia.org/wikipedia/commons/0/0f/2010-02-19_3000x2000_chicago_skyline.jpg") repeat;
+  animation: waterMovement 5s linear infinite;
+} */
+
+
+
+/* @keyframes waterMovement {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+} */

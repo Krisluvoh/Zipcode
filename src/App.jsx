@@ -16,17 +16,22 @@ import Zips from './components/Zips'
 
 import { useState, useEffect } from 'react'
 
+function resizeIframe(iframe) {
+  let w = window.innerWidth
+  let h = window.innerHeight
+  let s = Math.max(w, h)
+  iframe.width = s
+  iframe.height = s
+  iframe.style.transform = `translateY(-33%)`
+  // console.log(iframe)
+}
+
 function App() {
 
   useEffect(()=>{
-    // This might not work without user input first
-    try {
-      const mp3 = "./assets/C:\Users\Kristie Cook\Downloads\hotel-cafe-yeti-music-main-version-28200-01-41 (1).mp3"
-      let audio = new Audio(mp3)
-      audio.play()
-    } catch (error) {
-      console.warn("mp3 failed to load")
-    }
+    let iframe = document.querySelector('iframe')
+    resizeIframe(iframe)
+    window.addEventListener('resize', ()=>{resizeIframe(iframe)})
   })
 
   const [searchResults, setSearchResults] = useState(null)
@@ -44,7 +49,7 @@ function App() {
           />
       </section>
       <main className="container">
-        {pop && <h2>Population: {pop}</h2>}
+        {pop && <h2 className='zip'>Population: {pop}</h2>}
         <div id="search-results">
           {searchResults && <SearchResults results={searchResults} />}
           {zips && <Zips zips={zips} />}
